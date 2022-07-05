@@ -11,10 +11,13 @@ import UIKit
 class WeatherView: UIView {
     var cityTextField: UITextField = {
         let cityTextField = UITextField()
-        cityTextField.placeholder = "enter your city"
         cityTextField.isEnabled = true
         cityTextField.becomeFirstResponder()
         cityTextField.translatesAutoresizingMaskIntoConstraints = false
+        cityTextField.textAlignment = .center
+        cityTextField.textColor = bluesky
+        cityTextField.font = .systemFont(ofSize: 18)
+        cityTextField.placeholder = "укажите ваш город"
         return cityTextField
     }()
 
@@ -22,19 +25,32 @@ class WeatherView: UIView {
         let tempLabel = UILabel()
         tempLabel.translatesAutoresizingMaskIntoConstraints = false
         tempLabel.text = "tempLabel"
-        tempLabel.textAlignment = .justified
+        tempLabel.textAlignment = .center
+        tempLabel.textColor = bluesky
+        tempLabel.font = .systemFont(ofSize: 18)
         return tempLabel
     }()
 
+    private let gradientLayer = CAGradientLayer()
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = cyangreen
         self.addSubview(cityTextField)
         self.addSubview(tempLabel)
         setupConstraints()
+        gradientLayer.frame = bounds
     }
 
-    func setupConstraints() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupGradient()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             cityTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             cityTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -43,6 +59,11 @@ class WeatherView: UIView {
             tempLabel.trailingAnchor.constraint(equalTo: cityTextField.trailingAnchor),
             tempLabel.leadingAnchor.constraint(equalTo: cityTextField.leadingAnchor)
         ])
+    }
+
+    private func setupGradient() {
+        self.layer.addSublayer(gradientLayer)
+        gradientLayer.colors = [UIColor.systemBlue.cgColor, UIColor.white.cgColor]
     }
 }
 

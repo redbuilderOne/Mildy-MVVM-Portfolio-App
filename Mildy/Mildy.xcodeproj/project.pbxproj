@@ -17,6 +17,7 @@
 		FF8D6F1828732EC20021AA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D6F1728732EC20021AA23 /* ViewController.swift */; };
 		FF8D6F1D28732EC20021AA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8D6F1C28732EC20021AA23 /* Assets.xcassets */; };
 		FFE11F6F2874B91900A71823 /* ColorSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE11F6E2874B91900A71823 /* ColorSets.swift */; };
+		FFE11F712874C50300A71823 /* keyboardDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE11F702874C50300A71823 /* keyboardDismiss.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FF8D6F1C28732EC20021AA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF8D6F2128732EC20021AA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFE11F6E2874B91900A71823 /* ColorSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSets.swift; sourceTree = "<group>"; };
+		FFE11F702874C50300A71823 /* keyboardDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardDismiss.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0C0B6128748FA4009526C9 /* textPublisher.swift */,
+				FFE11F702874C50300A71823 /* keyboardDismiss.swift */,
 				FFE11F6E2874B91900A71823 /* ColorSets.swift */,
 			);
 			path = Extensions;
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE11F712874C50300A71823 /* keyboardDismiss.swift in Sources */,
 				FF0C0B592874862D009526C9 /* Model.swift in Sources */,
 				FF0C0B6228748FA4009526C9 /* textPublisher.swift in Sources */,
 				FF0C0B6028748F74009526C9 /* TempViewModel.swift in Sources */,

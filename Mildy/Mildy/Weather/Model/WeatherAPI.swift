@@ -17,6 +17,7 @@ class WeatherAPI {
     private func absoluteURL(city: String) -> URL? {
         let queryURL = URL(string: baseaseURL)!
         let components = URLComponents(url: queryURL, resolvingAgainstBaseURL: true)
+
         guard var urlComponents = components else { return nil}
         urlComponents.queryItems = [URLQueryItem(name: "appid", value: apiKey), URLQueryItem(name: "q", value: city), URLQueryItem(name: "units", value: "metric")]
         return urlComponents.url
@@ -27,6 +28,7 @@ class WeatherAPI {
                return Just(WeatherDetail.placeholder)
                    .eraseToAnyPublisher()
            }
+
            return
                URLSession.shared.dataTaskPublisher(for:url)
                    .map { $0.data }

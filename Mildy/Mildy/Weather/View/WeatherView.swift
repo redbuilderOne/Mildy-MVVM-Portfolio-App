@@ -13,10 +13,11 @@ class WeatherView: UIView {
         let cityTextField = UITextField()
         cityTextField.isEnabled = true
         cityTextField.becomeFirstResponder()
+        cityTextField.resignFirstResponder()
         cityTextField.translatesAutoresizingMaskIntoConstraints = false
         cityTextField.textAlignment = .center
         cityTextField.textColor = bluesky
-        cityTextField.font = .systemFont(ofSize: 18)
+        cityTextField.font = .systemFont(ofSize: 28)
         cityTextField.placeholder = "укажите ваш город"
         return cityTextField
     }()
@@ -27,7 +28,7 @@ class WeatherView: UIView {
         tempLabel.text = "tempLabel"
         tempLabel.textAlignment = .center
         tempLabel.textColor = bluesky
-        tempLabel.font = .systemFont(ofSize: 18)
+        tempLabel.font = .systemFont(ofSize: 24)
         return tempLabel
     }()
 

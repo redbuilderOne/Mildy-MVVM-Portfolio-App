@@ -16,7 +16,7 @@ final class TempViewModel: ObservableObject {
         $city
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .removeDuplicates()
-            .flatMap { (city:String) -> AnyPublisher <WeatherDetail, Never> in
+            .flatMap { (city: String) -> AnyPublisher <WeatherDetail, Never> in
                 WeatherAPI.shared.fetchWeather(for: city)
             }
             .assign(to: \.currentWeather , on: self)

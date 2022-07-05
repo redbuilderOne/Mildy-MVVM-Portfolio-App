@@ -16,6 +16,7 @@
 		FF8D6F1628732EC20021AA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D6F1528732EC20021AA23 /* SceneDelegate.swift */; };
 		FF8D6F1828732EC20021AA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D6F1728732EC20021AA23 /* ViewController.swift */; };
 		FF8D6F1D28732EC20021AA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8D6F1C28732EC20021AA23 /* Assets.xcassets */; };
+		FFE11F6F2874B91900A71823 /* ColorSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE11F6E2874B91900A71823 /* ColorSets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FF8D6F1728732EC20021AA23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF8D6F1C28732EC20021AA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF8D6F2128732EC20021AA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE11F6E2874B91900A71823 /* ColorSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0C0B6128748FA4009526C9 /* textPublisher.swift */,
+				FFE11F6E2874B91900A71823 /* ColorSets.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				FF0C0B6228748FA4009526C9 /* textPublisher.swift in Sources */,
 				FF0C0B6028748F74009526C9 /* TempViewModel.swift in Sources */,
 				FF0C0B5728748619009526C9 /* WeatherView.swift in Sources */,
+				FFE11F6F2874B91900A71823 /* ColorSets.swift in Sources */,
 				FF8D6F1828732EC20021AA23 /* ViewController.swift in Sources */,
 				FF8D6F1428732EC20021AA23 /* AppDelegate.swift in Sources */,
 				FF8D6F1628732EC20021AA23 /* SceneDelegate.swift in Sources */,

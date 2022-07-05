@@ -28,6 +28,7 @@ class WeatherView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.backgroundColor = cyangreen
         self.addSubview(cityTextField)
         self.addSubview(tempLabel)
         setupConstraints()

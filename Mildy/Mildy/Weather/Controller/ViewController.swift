@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         weatherView.cityTextField.text = viewModel.city
         weatherView.cityTextField.delegate = self
         binding()
+        self.hideKeyboardWhenTappedAround()
     }
 
     private func binding() {

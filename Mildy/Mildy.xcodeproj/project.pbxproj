@@ -60,7 +60,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF0C0B66287492A4009526C9 /* Weather */ = {
+		FF0C0B66287492A4009526C9 /* SearchWeather */ = {
 			isa = PBXGroup;
 			children = (
 				FF0C0B6528749292009526C9 /* Models */,
@@ -69,7 +69,7 @@
 				FF0C0B69287492EE009526C9 /* Extensions */,
 				FFE11F742875B75D00A71823 /* LocationManager.swift */,
 			);
-			path = Weather;
+			path = SearchWeather;
 			sourceTree = "<group>";
 		};
 		FF0C0B67287492BD009526C9 /* ViewModels */ = {
@@ -119,13 +119,21 @@
 		FF8D6F1228732EC20021AA23 /* Mildy */ = {
 			isa = PBXGroup;
 			children = (
-				FF0C0B66287492A4009526C9 /* Weather */,
+				FFE11FA128771B6300A71823 /* CurrentLocation */,
+				FF0C0B66287492A4009526C9 /* SearchWeather */,
 				FF8D6F1328732EC20021AA23 /* AppDelegate.swift */,
 				FF8D6F1528732EC20021AA23 /* SceneDelegate.swift */,
 				FF8D6F1C28732EC20021AA23 /* Assets.xcassets */,
 				FF8D6F2128732EC20021AA23 /* Info.plist */,
 			);
 			path = Mildy;
+			sourceTree = "<group>";
+		};
+		FFE11FA128771B6300A71823 /* CurrentLocation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CurrentLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

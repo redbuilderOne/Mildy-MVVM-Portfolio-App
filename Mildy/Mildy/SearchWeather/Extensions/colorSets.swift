@@ -35,3 +35,8 @@ let almostGrey = UIColor(rgb: 0x2F2F2F)
 let milkyWhite = UIColor(rgb: 0xF6F6F6)
 let sandyStone = UIColor(rgb: 0xFFCB74)
 
+//MARK: - Custom Colors Set#3
+let backblue = UIColor(rgb: 0x191851)
+let frontblue = UIColor(rgb: 0x4D48A2)
+let pinky = UIColor(rgb: 0xFF6B91)
+let whiteline = UIColor(rgb: 0xF5F6FB)

@@ -23,6 +23,7 @@
 		FFE11FA628771F1700A71823 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE11FA528771F1700A71823 /* Dynamic.swift */; };
 		FFE11FA928771F4D00A71823 /* CurrentLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE11FA828771F4D00A71823 /* CurrentLocationViewModel.swift */; };
 		FFE11FAB28771F8F00A71823 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE11FAA28771F8F00A71823 /* CurrentLocationViewController.swift */; };
+		FFE11FAD28775E8300A71823 /* CurrentLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE11FAC28775E8300A71823 /* CurrentLocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FFE11FA528771F1700A71823 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		FFE11FA828771F4D00A71823 /* CurrentLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewModel.swift; sourceTree = "<group>"; };
 		FFE11FAA28771F8F00A71823 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
+		FFE11FAC28775E8300A71823 /* CurrentLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				FFE11FAA28771F8F00A71823 /* CurrentLocationViewController.swift */,
+				FFE11FAC28775E8300A71823 /* CurrentLocationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				FFE11F6F2874B91900A71823 /* colorSets.swift in Sources */,
 				FF8D6F1828732EC20021AA23 /* SearchViewController.swift in Sources */,
 				FFE11F732874C7BD00A71823 /* dateFormat.swift in Sources */,
+				FFE11FAD28775E8300A71823 /* CurrentLocationView.swift in Sources */,
 				FFE11F752875B75D00A71823 /* LocationManager.swift in Sources */,
 				FF8D6F1428732EC20021AA23 /* AppDelegate.swift in Sources */,
 				FF8D6F1628732EC20021AA23 /* SceneDelegate.swift in Sources */,

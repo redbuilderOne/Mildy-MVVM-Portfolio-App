@@ -8,7 +8,14 @@
 import Foundation
 
 class CurrentLocationViewModel {
-    var statusText = Dynamic("")
+    var cityLabel = Dynamic("")
+
+    func showTemperature(city: String) {
+       WeatherAPI.shared.fetchWeather(for: city)
+        cityLabel.value = ""
+
+
+    }
 
     func userButtonPressed(login: String, password: String) {
 //        if login != User.logins[0].login || password != User.logins[0].password {

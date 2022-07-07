@@ -10,6 +10,7 @@ import MapKit
 import CoreLocation
 
 class CurrentLocationViewController: UIViewController {
+    let currentLocationView = CurrentLocationView()
 
     private let map: MKMapView = {
         let map = MKMapView()
@@ -17,30 +18,24 @@ class CurrentLocationViewController: UIViewController {
         return map
     }()
 
-    private let cityLabel: UILabel = {
-        let cityLabel = UILabel()
-        cityLabel.textAlignment = .center
-        cityLabel.backgroundColor = completeBlack
-        cityLabel.translatesAutoresizingMaskIntoConstraints = false
-        cityLabel.textColor = sandyStone
-        cityLabel.font = .systemFont(ofSize: 28)
-        return cityLabel
-    }()
+    override func loadView() {
+        view = currentLocationView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(map)
-        view.addSubview(cityLabel)
+        title = ""
         locate()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        view.backgroundColor = almostGrey
+        view.backgroundColor = frontblue
         map.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
         map.center = view.center
-        setupConstraints()
     }
+
 
     private func locate() {
         LocationManager.shared.getUsersLocation({
@@ -53,7 +48,7 @@ class CurrentLocationViewController: UIViewController {
             }
 
             LocationManager.shared.resolveLocationName(with: location) { [weak self] locationName in
-                self?.cityLabel.text = locationName
+                self?.currentLocationView.cityLabel.text = locationName
             }
         })
     }
@@ -63,12 +58,5 @@ class CurrentLocationViewController: UIViewController {
         pin.coordinate = location.coordinate
         map.setRegion(MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         map.addAnnotation(pin)
-    }
-
-    private func setupConstraints() {
-        NSLayoutConstraint.activate([
-            cityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cityLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -170)
-        ])
     }
 }

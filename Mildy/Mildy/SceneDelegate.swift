@@ -11,7 +11,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let _ = (scene as? UIWindowScene) else { return }
@@ -32,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func createCurrentLocationNavigationController() -> UINavigationController {
         let currentLocationViewController = CurrentLocationViewController()
-        currentLocationViewController.title = "Current Location"
+        currentLocationViewController.title = "Current"
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: cyangreen]
         currentLocationViewController.tabBarItem.image = UIImage(systemName:   "location")
         currentLocationViewController.tabBarItem.selectedImage = UIImage(systemName: "location.fill")
@@ -41,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
-        UITabBar.appearance().tintColor = peachyorange
+        UITabBar.appearance().tintColor = pinky
         UITabBar.appearance().unselectedItemTintColor = transparentblue
         tabBar.viewControllers = [createCurrentLocationNavigationController(), createSearchNavigationController()]
         return tabBar

@@ -9,7 +9,6 @@ import UIKit
 import Combine
 
 class SearchViewController: UIViewController {
-
     private let viewModel = TempViewModel()
     let weatherView = WeatherView()
     private var cancellable = Set<AnyCancellable>()
@@ -31,6 +30,3 @@ class SearchViewController: UIViewController {
         viewModel.$currentWeather.sink(receiveValue: { [weak self] currentWeather in self?.weatherView.tempLabel.text = currentWeather.main?.temp != nil ? "\(Int((currentWeather.main?.temp!)!)) ºC": " "}).store(in: &cancellable)
     }
 }
-
-
-

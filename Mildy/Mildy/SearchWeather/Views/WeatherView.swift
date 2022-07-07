@@ -16,11 +16,12 @@ class WeatherView: UIView {
         cityTextField.resignFirstResponder()
         cityTextField.translatesAutoresizingMaskIntoConstraints = false
         cityTextField.textAlignment = .center
-        cityTextField.layer.cornerRadius = 6
-        cityTextField.textColor = almostGrey
-        cityTextField.backgroundColor = sandyStone
-        cityTextField.font = .systemFont(ofSize: 28)
-        cityTextField.placeholder = "your city"
+        cityTextField.textColor = pinky
+        cityTextField.backgroundColor = .white
+        cityTextField.borderStyle = .line
+        cityTextField.layer.borderColor = CGColor(red: 255, green: 255, blue: 255, alpha: 100)
+        cityTextField.font = .boldSystemFont(ofSize: 28)
+        cityTextField.placeholder = " your city "
         return cityTextField
     }()
 
@@ -29,8 +30,8 @@ class WeatherView: UIView {
         tempLabel.translatesAutoresizingMaskIntoConstraints = false
         tempLabel.text = "tempLabel"
         tempLabel.textAlignment = .center
-        tempLabel.textColor = sandyStone
-        tempLabel.font = .systemFont(ofSize: 24)
+        tempLabel.textColor = pinky
+        tempLabel.font = .boldSystemFont(ofSize: 24)
         return tempLabel
     }()
 
@@ -46,7 +47,7 @@ class WeatherView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = almostGrey
+        self.backgroundColor = frontblue
 //        setupGradient()
     }
 
@@ -67,7 +68,7 @@ class WeatherView: UIView {
 
     private func setupGradient() {
         self.layer.addSublayer(gradientLayer)
-        gradientLayer.colors = [UIColor.systemBlue.cgColor, UIColor.white.cgColor]
+        gradientLayer.colors = [UIColor.systemBlue.cgColor, UIColor.blue.cgColor]
     }
 }
 

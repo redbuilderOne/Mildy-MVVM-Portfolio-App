@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ViewController: UITextFieldDelegate, UITextViewDelegate {
+extension SearchViewController: UITextFieldDelegate, UITextViewDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         weatherView.cityTextField.resignFirstResponder()
         return false

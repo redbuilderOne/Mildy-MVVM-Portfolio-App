@@ -10,7 +10,7 @@ import Combine
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     private let viewModel = TempViewModel()
     let weatherView = WeatherView()

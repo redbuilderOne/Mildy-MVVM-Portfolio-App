@@ -51,42 +51,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF0C0B6528749292009526C9 /* Model */ = {
+		FF0C0B6528749292009526C9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				FF0C0B582874862D009526C9 /* Model-WeatherDetail.swift */,
 				FF0C0B6328748FC2009526C9 /* WeatherAPI.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FF0C0B66287492A4009526C9 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				FF0C0B6528749292009526C9 /* Model */,
-				FF0C0B68287492D7009526C9 /* View */,
-				FF0C0B67287492BD009526C9 /* ViewModel */,
-				FF0C0B6A28749310009526C9 /* Controller */,
+				FF0C0B6528749292009526C9 /* Models */,
+				FF0C0B68287492D7009526C9 /* Views */,
+				FF0C0B67287492BD009526C9 /* ViewModels */,
 				FF0C0B69287492EE009526C9 /* Extensions */,
 				FFE11F742875B75D00A71823 /* LocationManager.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
 		};
-		FF0C0B67287492BD009526C9 /* ViewModel */ = {
+		FF0C0B67287492BD009526C9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				FF0C0B5F28748F74009526C9 /* TempViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		FF0C0B68287492D7009526C9 /* View */ = {
+		FF0C0B68287492D7009526C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				FF0C0B5628748619009526C9 /* WeatherView.swift */,
+				FF8D6F1728732EC20021AA23 /* ViewController.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FF0C0B69287492EE009526C9 /* Extensions */ = {
@@ -98,14 +98,6 @@
 				FFE11F722874C7BD00A71823 /* dateFormat.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		FF0C0B6A28749310009526C9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FF8D6F1728732EC20021AA23 /* ViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		FF8D6F0728732EC20021AA23 = {

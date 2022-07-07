@@ -16,9 +16,11 @@ class WeatherView: UIView {
         cityTextField.resignFirstResponder()
         cityTextField.translatesAutoresizingMaskIntoConstraints = false
         cityTextField.textAlignment = .center
-        cityTextField.textColor = bluesky
+        cityTextField.layer.cornerRadius = 6
+        cityTextField.textColor = almostGrey
+        cityTextField.backgroundColor = sandyStone
         cityTextField.font = .systemFont(ofSize: 28)
-        cityTextField.placeholder = "укажите ваш город"
+        cityTextField.placeholder = "your city"
         return cityTextField
     }()
 
@@ -27,7 +29,7 @@ class WeatherView: UIView {
         tempLabel.translatesAutoresizingMaskIntoConstraints = false
         tempLabel.text = "tempLabel"
         tempLabel.textAlignment = .center
-        tempLabel.textColor = bluesky
+        tempLabel.textColor = sandyStone
         tempLabel.font = .systemFont(ofSize: 24)
         return tempLabel
     }()
@@ -44,7 +46,8 @@ class WeatherView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupGradient()
+        self.backgroundColor = almostGrey
+//        setupGradient()
     }
 
     required init?(coder: NSCoder) {

@@ -28,3 +28,10 @@ let bluesky = UIColor(rgb: 0x206EA4)
 let peachyorange = UIColor(rgb: 0xFE8F7B)
 let transparentblue = UIColor(rgb: 0xE5F3FE)
 let cyangreen = UIColor(rgb: 0xB3EAE3)
+
+//MARK: - Custom Colors Set#2
+let completeBlack = UIColor(rgb: 0x111111)
+let almostGrey = UIColor(rgb: 0x2F2F2F)
+let milkyWhite = UIColor(rgb: 0xF6F6F6)
+let sandyStone = UIColor(rgb: 0xFFCB74)
+

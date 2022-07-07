@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func createCurrentLocationNavigationController() -> UINavigationController {
-        let currentLocationViewController = SearchViewController()
+        let currentLocationViewController = CurrentLocationViewController()
         currentLocationViewController.title = "Current Location"
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: cyangreen]
         currentLocationViewController.tabBarItem.image = UIImage(systemName:   "location")

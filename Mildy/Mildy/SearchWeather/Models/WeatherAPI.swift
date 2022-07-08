@@ -28,7 +28,6 @@ class WeatherAPI {
                return Just(WeatherDetail.placeholder)
                    .eraseToAnyPublisher()
            }
-
            return
                URLSession.shared.dataTaskPublisher(for: url)
                    .map { $0.data }

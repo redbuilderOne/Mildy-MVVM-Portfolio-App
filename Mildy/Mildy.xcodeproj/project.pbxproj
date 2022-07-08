@@ -126,10 +126,10 @@
 		FF8D6F1228732EC20021AA23 /* Mildy */ = {
 			isa = PBXGroup;
 			children = (
-				FFE11FA128771B6300A71823 /* CurrentLocation */,
-				FF0C0B66287492A4009526C9 /* SearchWeather */,
 				FF8D6F1328732EC20021AA23 /* AppDelegate.swift */,
 				FF8D6F1528732EC20021AA23 /* SceneDelegate.swift */,
+				FFE11FA128771B6300A71823 /* CurrentLocation */,
+				FF0C0B66287492A4009526C9 /* SearchWeather */,
 				FF8D6F1C28732EC20021AA23 /* Assets.xcassets */,
 				FF8D6F2128732EC20021AA23 /* Info.plist */,
 			);

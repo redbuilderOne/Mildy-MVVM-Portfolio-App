@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func createSearchNavigationController() -> UINavigationController {
         let searchViewController = SearchViewController()
-        searchViewController.title = "Search"
+        searchViewController.title = ""
         searchViewController.tabBarItem.image = UIImage(systemName: "location.magnifyingglass")
         searchViewController.tabBarItem.selectedImage = UIImage(systemName:  "location.magnifyingglass.fill")
         return UINavigationController(rootViewController: searchViewController)
@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func createCurrentLocationNavigationController() -> UINavigationController {
         let currentLocationViewController = CurrentLocationViewController()
-        currentLocationViewController.title = "Current"
+        currentLocationViewController.title = ""
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: cyangreen]
         currentLocationViewController.tabBarItem.image = UIImage(systemName:   "location")
         currentLocationViewController.tabBarItem.selectedImage = UIImage(systemName: "location.fill")

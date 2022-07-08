@@ -8,9 +8,13 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Combine
 
 class CurrentLocationViewController: UIViewController {
     let currentLocationView = CurrentLocationView()
+    let currentLocationViewModel = CurrentLocationViewModel()
+    let viewModel = TempViewModel()
+    var cancellable = Set<AnyCancellable>()
 
     private let map: MKMapView = {
         let map = MKMapView()
@@ -27,6 +31,9 @@ class CurrentLocationViewController: UIViewController {
         view.addSubview(map)
         title = ""
         locate()
+//        bindViewModel()
+        currentLocationView.cityTextField.text = viewModel.city
+        binding()
     }
 
     override func viewDidLayoutSubviews() {
@@ -36,6 +43,24 @@ class CurrentLocationViewController: UIViewController {
         map.center = view.center
     }
 
+    func bindViewModel() {
+        currentLocationViewModel.tempLabel.bind({ (tempLabel) in
+            DispatchQueue.main.async {
+                self.currentLocationView.tempLabel.text = tempLabel
+            }
+        })
+    }
+
+    private func binding() {
+        currentLocationView.cityTextField.textPublisherChanged
+            .assign(to: \.city, on: viewModel)
+            .store(in: &self.cancellable)
+        
+        viewModel.$currentWeather
+            .sink(receiveValue: { [weak self] currentWeather in
+            self?.currentLocationView.tempLabel.text = currentWeather.main?.temp != nil ? "\(Int((currentWeather.main?.temp!)!)) ºC": " "})
+            .store(in: &self.cancellable)
+    }
 
     private func locate() {
         LocationManager.shared.getUsersLocation({
@@ -48,7 +73,8 @@ class CurrentLocationViewController: UIViewController {
             }
 
             LocationManager.shared.resolveLocationName(with: location) { [weak self] locationName in
-                self?.currentLocationView.cityLabel.text = locationName
+                self?.currentLocationView.cityTextField.text = locationName
+                self?.currentLocationViewModel.showCurrentLocationTemperature(location: locationName!)
             }
         })
     }
